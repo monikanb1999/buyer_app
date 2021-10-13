@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'first_screen.dart';
 import 'second_screen.dart';
-import 'ThirdScreen.dart';
+import 'third_screen.dart';
 void main() {
   runApp(const MyApp());
 }

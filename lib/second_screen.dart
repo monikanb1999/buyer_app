@@ -27,28 +27,44 @@ class _SecondScreenState extends State<SecondScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemCount: _texts.length,
-      itemBuilder: (context, index) {
-        return CheckboxListTile(
-          title: Image.asset('assets/road.jpg',width: 100.0,height: 150.0,
-            alignment: Alignment.topLeft,fit: BoxFit.contain,),
-          value: _isChecked[index],
-          onChanged: (val) {
-            setState(
-                  () {
-                _isChecked[index] = val!;
-              },
-            );
-          },
-        );
-      }, separatorBuilder: (BuildContext context, int index)
-    { return const Divider(height: 2.0,thickness: 2.0,); },
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.separated(
+              itemCount: _texts.length,
+              itemBuilder: (context, index) {
+                return CheckboxListTile(
+                  title: Image.asset('assets/road.jpg',width: 100.0,height: 150.0,
+                    alignment: Alignment.topLeft,fit: BoxFit.contain,),
+                  value: _isChecked[index],
+                  onChanged: (val) {
+                    setState(
+                          () {
+                        _isChecked[index] = val!;
+                      },
+                    );
+                  },
+                );
+              }, separatorBuilder: (BuildContext context, int index)
+            { return const Divider(height: 2.0,thickness: 2.0,); },
+            ),
+          ),
+        ],
+      ),
     );
-
   }
 }
 
-
+// ,Container(
+// margin: EdgeInsets.all(25),
+// child: FlatButton(
+// child: Text('LogIn', style: TextStyle(fontSize: 20.0),),
+// color: Colors.blueAccent,
+// textColor: Colors.white,
+// onPressed: () {},
+// ),
+// );
+//
 
 
