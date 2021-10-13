@@ -63,11 +63,11 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
-          body: const TabBarView(
+          body:  TabBarView(
             children: [
               FirstScreen(),
-              SecondScreen(),
-              ThirdScreen(),
+              const SecondScreen(),
+              const ThirdScreen(),
             ],
           ),
         ),
